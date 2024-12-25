@@ -34,9 +34,7 @@ public class InputsClass {
 		int fees=sc.nextInt();
 		mc.ValueInsertion(1,name,dob,age,gen,dname,tot,fees);
 	}
-  
-  //Selection
-  
+//Selection
 	public void M2() {
 		System.out.print("\n1.To Show All Patient Detail."
 				+ "\n2.To Show Specific Patient Details."
@@ -78,10 +76,8 @@ public class InputsClass {
 		 mc.Selection(7,0,"");
 	   }else {
 		 System.out.println("Enter Valid Option"); }  
-	}
-	
-	//Updating
-	
+	}	
+//Updating	
 	public void M3(){
 		System.out.print("1.To Change Total Bill Amount"
 				+ "\n2.To Change Doctor Name\n3.To Pay Bill"
@@ -109,9 +105,7 @@ public class InputsClass {
 	   else
 		   System.out.println("Please Enter Valid Option");
 	 }
-	
-	//Deletion
-	
+//Deletion	
 	public void M4() {
 		System.out.println("Enter Patient  ID:");
 		int id=sc.nextInt();
