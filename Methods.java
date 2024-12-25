@@ -8,10 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
  public class MethodsClass {
-    private Connection con;
-	
-	
-	//ConnectionMethod(Constructor)
+    private Connection con;	
+//ConnectionMethod(Constructor)
  public  MethodsClass() {  
 	 String dburl="jdbc:mysql://localhost:3306/javademodb";
 	 String dbuser="root";
@@ -22,9 +20,8 @@ import java.sql.Statement;
 	 }catch(SQLException e) {
         System.out.println("Error:"+e);
 	 }
-   }
-  
-   //Login Code 
+   } 
+//Login Code 
    boolean login(int opt,String un,String pw) {
        boolean r=false;
      try{ String query="";
@@ -45,9 +42,7 @@ import java.sql.Statement;
       } 	
     	return r;
     }
- 
-  
-  //TableCreation
+//TableCreation
   public void TableCreation(){
 	try {
 	String query="create table patients(PatientID int primary key "
@@ -62,9 +57,7 @@ import java.sql.Statement;
 	       System.out.println("Error:"+e);
 	}
   }
-  
-  
-  //ValueInsertion
+//ValueInsertion
   public void ValueInsertion(int opt,String name,
 		String dob,int age,String gen,String Dname,
 		String treatment,int bill) {
@@ -95,10 +88,7 @@ import java.sql.Statement;
 	      System.out.println("Error:"+e);
 	}
   }
-  
-  
-  //ShowValues
-  
+//ShowValues  
   public void Selection(int opt,int id,String x) {
 	   try {
 		   String query="";  
@@ -150,11 +140,7 @@ import java.sql.Statement;
 			    System.out.println("Error:"+e);
 	   }
 	}
-
- 
-
- 
-  //UpdatingValues
+//UpdatingValues
   public void ValueUpdation(int opt,int fees,int id,String x){
 	  try {	
 		  String query="";float amt=0;
@@ -196,11 +182,7 @@ import java.sql.Statement;
 	     System.out.println("Error:"+e);
    }
  }
-  
-  
-  
-  
-  //DeletingValues
+//DeletingValues
   public void Deletion(int id) {
 	  try {
 	String query="delete *from patients where PatientID=?";
@@ -212,10 +194,8 @@ import java.sql.Statement;
 	  }catch(SQLException e) {
 	      System.out.println("Error:"+e);
 	}
-  }
-  
-  //Connection Close
-  
+  } 
+//Connection Close  
   public void closer() {
 	  try {
 	  con.close();
